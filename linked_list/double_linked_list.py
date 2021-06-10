@@ -17,6 +17,15 @@ class LinkedList:
         self.tail = None
         self.length = 0
 
+    def __str__(self):
+        return str(self.head.__dict__)
+
+    def __iter__(self):
+        head = self.head
+        while head:
+            yield head.val
+            head = head.next
+
     def add_at_tail(self, val):
         new_element = Element(val)
         if not self.tail:
@@ -132,3 +141,21 @@ def reverse_linked_list(linked_list):
         current_element = current_element.prev
         counter += 1
     return reversed_linked_list
+
+
+linked_list = LinkedList()
+linked_list.add_at_tail(2)
+linked_list.add_at_head(1)
+linked_list.add_at_tail(3)
+linked_list.add_at_tail(4)
+
+iterator = iter(linked_list)
+a = iterator.__next__()
+b = iterator.__next__()
+c = iterator.__next__()
+print([a, b, c])
+new_iterator = iter(linked_list)
+answer = []
+for i in new_iterator:
+    answer.append(i)
+print(answer)

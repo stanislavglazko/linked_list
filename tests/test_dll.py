@@ -82,3 +82,20 @@ def test_empty_linked_list():
         assert linked_list.tail.value is None
     linked_list.delete_at_index(1)
     assert linked_list.length == 0
+
+
+def test_iteration():
+    linked_list = LinkedList()
+    linked_list.add_at_tail(2)
+    linked_list.add_at_head(1)
+    linked_list.add_at_tail(3)
+    linked_list.add_at_tail(4)
+    result = []
+    for i in linked_list:
+        result.append(i)
+    assert result == [1, 2, 3, 4]
+    linked_list = LinkedList()
+    result = []
+    for i in linked_list:
+        result.append(i)
+    assert result == []
