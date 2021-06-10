@@ -52,36 +52,7 @@ class LinkedList:
         self.head = new_element
         self.length += 1
 
-    def add_at_index(self, index, val):
-        if index == self.length:
-            self.add_at_tail(val)
-            return
-        elif index == 0:
-            self.add_at_head(val)
-            return
-        elif index > self.length:
-            return
-        new_element = Element(val)
-        counter = 0
-        if index <= self.length // 2:
-            current_element = self.head
-            while counter != index:
-                current_element = current_element.next
-                counter += 1
-        else:
-            current_element = self.tail
-            while counter != (self.length - index - 1):
-                current_element = current_element.prev
-                counter += 1
-        new_element.next = current_element
-        new_element.prev = current_element.prev
-        current_element.prev.next = new_element
-        current_element.prev = new_element
-        self.length += 1
-
-    def get(self, index):
-        if index >= self.length:
-            return 'Index out of range'
+    def get_element(self, index):
         counter = 0
         if index <= self.length // 2:
             current_element = self.head
@@ -93,7 +64,30 @@ class LinkedList:
             while counter != (self.length - 1 - index):
                 current_element = current_element.prev
                 counter += 1
-        return current_element.val
+        return current_element
+
+    def add_at_index(self, index, val):
+        if index == self.length:
+            self.add_at_tail(val)
+            return
+        elif index == 0:
+            self.add_at_head(val)
+            return
+        elif index > self.length:
+            return
+        new_element = Element(val)
+        current_element = self.get_element(index)
+        new_element.next = current_element
+        new_element.prev = current_element.prev
+        current_element.prev.next = new_element
+        current_element.prev = new_element
+        self.length += 1
+
+    def get(self, index):
+        if index >= self.length:
+            return 'Index out of range'
+        target_element = self.get_element(index)
+        return target_element.val
 
     def delete_at_index(self, index):
         if index >= self.length:
@@ -141,21 +135,3 @@ def reverse_linked_list(linked_list):
         current_element = current_element.prev
         counter += 1
     return reversed_linked_list
-
-
-linked_list = LinkedList()
-linked_list.add_at_tail(2)
-linked_list.add_at_head(1)
-linked_list.add_at_tail(3)
-linked_list.add_at_tail(4)
-
-iterator = iter(linked_list)
-a = iterator.__next__()
-b = iterator.__next__()
-c = iterator.__next__()
-print([a, b, c])
-new_iterator = iter(linked_list)
-answer = []
-for i in new_iterator:
-    answer.append(i)
-print(answer)
