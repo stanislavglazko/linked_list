@@ -109,17 +109,7 @@ class LinkedList:
             self.tail = new_tail
             self.length -= 1
             return
-        counter = 0
-        if index <= self.length // 2:
-            current_element = self.head
-            while counter != index:
-                current_element = current_element.next
-                counter += 1
-        else:
-            current_element = self.tail
-            while counter != (self.length - index - 1):
-                current_element = current_element.prev
-                counter += 1
+        current_element = self.get_element(index)
         current_element.prev.next, current_element.next.prev = \
             current_element.next, current_element.prev
         self.length -= 1
