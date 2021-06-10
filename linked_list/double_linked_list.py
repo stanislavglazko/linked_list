@@ -26,13 +26,19 @@ class LinkedList:
             yield head.val
             head = head.next
 
-    def add_at_tail(self, val):
-        new_element = Element(val)
-        if not self.tail:
+    def check_head_and_tail(self, val):
+        if not self.head or not self.tail:
+            new_element = Element(val)
             self.tail = new_element
             self.head = new_element
             self.length += 1
+            return True
+        return False
+
+    def add_at_tail(self, val):
+        if self.check_head_and_tail(val):
             return
+        new_element = Element(val)
         new_element.prev = self.tail
         new_element.next = None
         self.tail.next = new_element
@@ -40,12 +46,9 @@ class LinkedList:
         self.length += 1
 
     def add_at_head(self, val):
-        new_element = Element(val)
-        if not self.head:
-            self.head = new_element
-            self.tail = new_element
-            self.length += 1
+        if self.check_head_and_tail(val):
             return
+        new_element = Element(val)
         new_element.next = self.head
         new_element.prev = None
         self.head.prev = new_element
