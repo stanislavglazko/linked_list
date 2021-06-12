@@ -8,6 +8,8 @@
 
 .. figure:: https://github.com/stanislavglazko/linked_list/actions/workflows/github-actions-demo.yml/badge.svg
 
+`<https://github.com/stanislavglazko/linked_list/actions/workflows/github-actions-demo.yml/badge.svg>`_
+
 ======================
 Linked List for Python
 ======================
