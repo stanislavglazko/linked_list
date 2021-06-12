@@ -6,7 +6,7 @@
    :target: https://codeclimate.com/github/stanislavglazko/linked_list/test_coverage
    :alt: Test Coverage
 
-https://github.com/stanislavglazko/linked_list/actions/workflows/github-actions-demo.yml/badge.svg
+..figure:: https://github.com/stanislavglazko/linked_list/actions/workflows/github-actions-demo.yml/badge.svg
 
 ======================
 Linked List for Python
