@@ -31,3 +31,35 @@ Example:
 
    linked_list.add_at_tail(4)
 
+* add_at_head = add new element at the head with val(int)
+
+Example:
+
+.. code-block:: python
+
+   linked_list.add_at_head(4)
+
+* add_at_index = add new element at the index (int) with val(int)
+
+Example:
+
+.. code-block:: python
+
+   linked_list.add_at_index(0, -1)
+
+
+* delete_at_index = delete element with the index (int)
+
+Example:
+
+.. code-block:: python
+
+   linked_list.delete_at_index(0)
+
+* get = get the value of the element with the index (int)
+
+Example:
+
+.. code-block:: python
+
+   linked_list.get(0)
