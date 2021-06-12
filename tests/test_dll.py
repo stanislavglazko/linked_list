@@ -79,8 +79,7 @@ def test_empty_linked_list():
     linked_list = LinkedList()
     assert linked_list.length == 0
     assert linked_list.get(1) == 'Index out of range'
-    linked_list.add_at_index(1, 1)
-    assert linked_list.get(1) == 'Index out of range'
+    assert linked_list.add_at_index(1, 1) == 'Index out of range'
     with pytest.raises(AttributeError):
         assert linked_list.head.value is None
     with pytest.raises(AttributeError):
