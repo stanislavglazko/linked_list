@@ -6,3 +6,6 @@
    :target: https://codeclimate.com/github/stanislavglazko/linked_list/test_coverage
    :alt: Test Coverage
 
+======================
+Linked List for Python
+======================
