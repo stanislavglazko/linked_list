@@ -71,10 +71,9 @@ Example of using:
     linked_list.delete_at_index(1)
     print(linked_list.get(1))
 
-Reversed of doubly linked list:
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 You are able to get the reversed copy of the linked list.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: python
 
