@@ -28,4 +28,5 @@ Methods of doubly linked list:
 Example:
 .. code-block:: python
 
-linked_list.add_at_tail(4)
+   linked_list.add_at_tail(4)
+
