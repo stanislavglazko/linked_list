@@ -5,7 +5,6 @@ from linked_list.double_linked_list \
 
 def test_double_linked_list():
     linked_list = LinkedList()
-    assert linked_list.length == 0
     linked_list.add_at_tail(1)
     assert linked_list.length == 1
     assert linked_list.tail.val == 1
