@@ -10,6 +10,6 @@
 Linked List for Python
 ======================
 
-There is my own version of double linked list.
+There is my own version of doubly linked list.
 ----------------------------------------------
 
