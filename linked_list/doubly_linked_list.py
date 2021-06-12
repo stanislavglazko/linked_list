@@ -79,7 +79,7 @@ class LinkedList:
             self.add_at_head(val)
             return
         elif index > self.length:
-            return
+            return 'Index out of range'
         new_element = Element(val)
         current_element = self.get_element(index)
         new_element.next = current_element
