@@ -130,14 +130,3 @@ def reverse_linked_list(linked_list):
         current_element = current_element.prev
         counter += 1
     return reversed_linked_list
-
-
-linked_list = LinkedList()
-linked_list.add_at_tail(1)
-linked_list.add_at_head(2)
-linked_list.add_at_head(3)
-linked_list.add_at_tail(4)
-print(linked_list.get(0))
-print(linked_list.get(1))
-print(linked_list.get(2))
-print(linked_list.get(3))
