@@ -35,25 +35,27 @@ class LinkedList:
             return True
         return False
 
-    def add_at_tail(self, val):
+    def add(self, val, place):
         if self.check_head_and_tail(val):
             return
         new_element = Element(val)
-        new_element.prev = self.tail
-        new_element.next = None
-        self.tail.next = new_element
-        self.tail = new_element
+        if place == 'head':
+            new_element.next = self.head
+            new_element.prev = None
+            self.head.prev = new_element
+            self.head = new_element
+        else:
+            new_element.prev = self.tail
+            new_element.next = None
+            self.tail.next = new_element
+            self.tail = new_element
         self.length += 1
 
+    def add_at_tail(self, val):
+        self.add(val, place='tail')
+
     def add_at_head(self, val):
-        if self.check_head_and_tail(val):
-            return
-        new_element = Element(val)
-        new_element.next = self.head
-        new_element.prev = None
-        self.head.prev = new_element
-        self.head = new_element
-        self.length += 1
+        self.add(val, place='head')
 
     def get_element(self, index):
         counter = 0

@@ -29,11 +29,13 @@ def test_double_linked_list():
     assert linked_list.get(2) == 1
     assert linked_list.get(3) == 4
     linked_list.add_at_index(4, 5)
+    assert linked_list.get(4) == 5
+    assert linked_list.head.val == 3
     assert linked_list.tail.val == 5
     assert linked_list.length == 5
     assert linked_list.tail.prev.val == 4
-    assert linked_list.head.val == 3
     linked_list.add_at_index(0, -1)
+    assert linked_list.get(0) == -1
     assert linked_list.length == 6
     assert linked_list.head.val == -1
     assert linked_list.head.next.val == 3
