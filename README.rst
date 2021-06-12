@@ -9,3 +9,7 @@
 ======================
 Linked List for Python
 ======================
+
+There is my own version of double linked list.
+----------------------------------------------
+
