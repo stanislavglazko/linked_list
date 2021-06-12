@@ -13,3 +13,14 @@ Linked List for Python
 There is my own version of doubly linked list.
 ----------------------------------------------
 
+Attributes of doubly linked list:
+* head = the head element (start of the doubly linked list)
+* tail = the tail element (end of the doubly linked list)
+* length
+
+Methods of doubly linked list:
+* add_at_tail = add new element at the tail with val(int)
+Example:
+'''
+linked_list.add_at_tail(4)
+'''
