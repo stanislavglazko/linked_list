@@ -26,6 +26,7 @@ Methods of doubly linked list:
 * add_at_tail = add new element at the tail with val(int)
 
 Example:
+
 .. code-block:: python
 
    linked_list.add_at_tail(4)
