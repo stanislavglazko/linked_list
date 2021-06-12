@@ -10,6 +10,7 @@ def test_double_linked_list():
     assert linked_list.length == 1
     assert linked_list.tail.val == 1
     assert linked_list.tail.next is None
+    assert linked_list.head.val == 1
     linked_list.add_at_head(2)
     assert linked_list.length == 2
     assert linked_list.head.val == 2
