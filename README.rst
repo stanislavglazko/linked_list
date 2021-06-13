@@ -82,7 +82,7 @@ You are able to get the reversed copy of the linked list.
 
    reversed_linked_list = reverse_linked_list(linked_list)
 
-You are able to use for cycle for linked list.
+You are able to use "for" cycle for linked list.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 .. code-block:: python
 
@@ -94,4 +94,11 @@ You are able to use for cycle for linked list.
     result = []
     for i in linked_list:
         result.append(i)
+
+How to install:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code-block:: python
+
+    python3 -m pip install --user git+https://github.com/stanislavglazko/linked_list
 
